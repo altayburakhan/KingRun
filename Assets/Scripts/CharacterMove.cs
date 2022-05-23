@@ -29,7 +29,7 @@ public class CharacterMove : MonoBehaviour
     {
         Swipe();
         playerForwardVector = new Vector3(0,0,1);
-        Debug.Log(playerForwardVector);
+        //Debug.Log(playerForwardVector);
         rigidbodyOfPlayer.MovePosition(transform.position + playerForwardVector * Time.deltaTime * speedOfPlayer);
     }
 
@@ -51,12 +51,14 @@ public class CharacterMove : MonoBehaviour
                 if (Distance.x < -swipeRange)
                 {
                     //Statement
+                    Debug.Log("left");
                     stopTouch = true;
                 }
 
                 else if (Distance.x > swipeRange)
                 {
                     //Statement
+                    Debug.Log("Right");
                     stopTouch = true;
                 }
                 
