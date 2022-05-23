@@ -10,6 +10,8 @@ public class CharacterMove : MonoBehaviour
     private float speedOfPlayer = 20f;
     // Player`s Vector.
     private Vector3 playerForwardVector;
+
+    //private Vector3 playersPosition;
     // Touch Vectors.
     private Vector3 startTouchPosition;
     private Vector3 currentPosition;
@@ -27,6 +29,7 @@ public class CharacterMove : MonoBehaviour
 
     private void Update()
     {
+       
         Swipe();
         playerForwardVector = new Vector3(0,0,1);
         //Debug.Log(playerForwardVector);
@@ -36,6 +39,7 @@ public class CharacterMove : MonoBehaviour
     // Touch Method.
     public void Swipe()
     {
+        //playersPosition = transform.position;
         // If player touch screen FIRST-ONE time  
         if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
         {
@@ -52,12 +56,14 @@ public class CharacterMove : MonoBehaviour
                 {
                     //Statement
                     Debug.Log("left");
+                    //playersPosition.x = -2.5f;
                     stopTouch = true;
                 }
 
                 else if (Distance.x > swipeRange)
                 {
                     //Statement
+                    //playersPosition.x = 2.5f;
                     Debug.Log("Right");
                     stopTouch = true;
                 }
