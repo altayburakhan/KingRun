@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class CharacterMove : MonoBehaviour
 {
+    // ========================================= Definitions ========================================
     private CharacterController controller;
     private Vector3 characterDirection;
     private Vector3 startTouchPosition;
@@ -16,17 +17,14 @@ public class CharacterMove : MonoBehaviour
     private float forwardSpeed = 10f;
     private int desiredLane = 0; // 0 = left, 1 = right
     private float laneDistance = 4; // The distance between two lanes.
-
+    // ==============================================================================================
     private void Start()
     {
         controller = GetComponent<CharacterController>();
-
     }
 
     private void Update()
     {
-        Vector2 left = new Vector2(-2.5f, transform.position.y);
-        Vector2 right = new Vector2(2.5f, transform.position.y);
         characterDirection.z = forwardSpeed;
 
         if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
