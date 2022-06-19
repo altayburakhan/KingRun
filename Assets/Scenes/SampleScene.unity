@@ -292,6 +292,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ArcherChoice
       objectReference: {fileID: 0}
+    - target: {fileID: 2996398706614119274, guid: d6d7017fb7ed69f46a11d29ba379e225, type: 3}
+      propertyPath: m_TagString
+      value: archer
+      objectReference: {fileID: 0}
     - target: {fileID: 2996398706900242425, guid: d6d7017fb7ed69f46a11d29ba379e225, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -389,6 +393,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BarbarianChoice
       objectReference: {fileID: 0}
+    - target: {fileID: 958705129324533742, guid: a9afd49c669f3d14393408ad23470d5c, type: 3}
+      propertyPath: m_TagString
+      value: barbarian
+      objectReference: {fileID: 0}
     - target: {fileID: 3457263282805587852, guid: a9afd49c669f3d14393408ad23470d5c, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -455,6 +463,10 @@ PrefabInstance:
     - target: {fileID: 772972015596666903, guid: 2449b4f53a0b1474c98645269fff2835, type: 3}
       propertyPath: m_Name
       value: WarriorChoicel
+      objectReference: {fileID: 0}
+    - target: {fileID: 772972015596666903, guid: 2449b4f53a0b1474c98645269fff2835, type: 3}
+      propertyPath: m_TagString
+      value: warrior
       objectReference: {fileID: 0}
     - target: {fileID: 4848554385154512362, guid: 2449b4f53a0b1474c98645269fff2835, type: 3}
       propertyPath: m_RootOrder
@@ -665,6 +677,38 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1806451978547235885, guid: 34b169601ab63bf4b99914c2a56598f7, type: 3}
   m_PrefabInstance: {fileID: 199611848}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &225688628
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 225688629}
+  m_Layer: 0
+  m_Name: Blocks
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &225688629
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225688628}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 4.7628593, z: 30.348858}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1673320628}
+  - {fileID: 884481845}
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &234597219
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -773,6 +817,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MageChoice
       objectReference: {fileID: 0}
+    - target: {fileID: 1822778265930637382, guid: 35ec6f8415428ad4fa4611390aff2a2d, type: 3}
+      propertyPath: m_TagString
+      value: mage
+      objectReference: {fileID: 0}
     - target: {fileID: 2802303948004315437, guid: 35ec6f8415428ad4fa4611390aff2a2d, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -835,6 +883,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WarriorChoicel (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 772972015596666903, guid: 2449b4f53a0b1474c98645269fff2835, type: 3}
+      propertyPath: m_TagString
+      value: warrior
+      objectReference: {fileID: 0}
     - target: {fileID: 4848554385154512362, guid: 2449b4f53a0b1474c98645269fff2835, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -896,6 +948,10 @@ PrefabInstance:
     - target: {fileID: 958705129324533742, guid: a9afd49c669f3d14393408ad23470d5c, type: 3}
       propertyPath: m_Name
       value: BarbarianChoice (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 958705129324533742, guid: a9afd49c669f3d14393408ad23470d5c, type: 3}
+      propertyPath: m_TagString
+      value: barbarian
       objectReference: {fileID: 0}
     - target: {fileID: 3457263282805587852, guid: a9afd49c669f3d14393408ad23470d5c, type: 3}
       propertyPath: m_RootOrder
@@ -1941,6 +1997,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ArcherChoice (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2996398706614119274, guid: d6d7017fb7ed69f46a11d29ba379e225, type: 3}
+      propertyPath: m_TagString
+      value: archer
+      objectReference: {fileID: 0}
     - target: {fileID: 2996398706900242425, guid: d6d7017fb7ed69f46a11d29ba379e225, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -2683,12 +2743,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 884481841}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.71, y: 0.506, z: 199.43}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 31.933586, y: -4.2568593, z: 169.08113}
   m_LocalScale: {x: 2.9712787, y: 1, z: 1.502197}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_Father: {fileID: 225688629}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &884481846
 Animator:
@@ -2749,7 +2809,7 @@ Transform:
   - {fileID: 510642491}
   - {fileID: 1129325059}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &922228287
 GameObject:
@@ -3875,6 +3935,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MageChoice
       objectReference: {fileID: 0}
+    - target: {fileID: 1822778265930637382, guid: 35ec6f8415428ad4fa4611390aff2a2d, type: 3}
+      propertyPath: m_TagString
+      value: mage
+      objectReference: {fileID: 0}
     - target: {fileID: 2802303948004315437, guid: 35ec6f8415428ad4fa4611390aff2a2d, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -4033,6 +4097,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WarriorChoicel (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 772972015596666903, guid: 2449b4f53a0b1474c98645269fff2835, type: 3}
+      propertyPath: m_TagString
+      value: warrior
+      objectReference: {fileID: 0}
     - target: {fileID: 4848554385154512362, guid: 2449b4f53a0b1474c98645269fff2835, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -4095,6 +4163,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ArcherChoice (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2996398706614119274, guid: d6d7017fb7ed69f46a11d29ba379e225, type: 3}
+      propertyPath: m_TagString
+      value: archer
+      objectReference: {fileID: 0}
     - target: {fileID: 2996398706900242425, guid: d6d7017fb7ed69f46a11d29ba379e225, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -4156,6 +4228,10 @@ PrefabInstance:
     - target: {fileID: 1822778265930637382, guid: 35ec6f8415428ad4fa4611390aff2a2d, type: 3}
       propertyPath: m_Name
       value: MageChoice (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1822778265930637382, guid: 35ec6f8415428ad4fa4611390aff2a2d, type: 3}
+      propertyPath: m_TagString
+      value: mage
       objectReference: {fileID: 0}
     - target: {fileID: 2802303948004315437, guid: 35ec6f8415428ad4fa4611390aff2a2d, type: 3}
       propertyPath: m_RootOrder
@@ -4930,12 +5006,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1673320623}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4, y: 1.01, z: 20.11}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 32.223587, y: -3.7528594, z: -10.238857}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_Father: {fileID: 225688629}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1736365980
 PrefabInstance:
@@ -5598,6 +5674,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MageChoice
       objectReference: {fileID: 0}
+    - target: {fileID: 1822778265930637382, guid: 35ec6f8415428ad4fa4611390aff2a2d, type: 3}
+      propertyPath: m_TagString
+      value: mage
+      objectReference: {fileID: 0}
     - target: {fileID: 2802303948004315437, guid: 35ec6f8415428ad4fa4611390aff2a2d, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -6103,6 +6183,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WarriorChoicel
       objectReference: {fileID: 0}
+    - target: {fileID: 772972015596666903, guid: 2449b4f53a0b1474c98645269fff2835, type: 3}
+      propertyPath: m_TagString
+      value: warrior
+      objectReference: {fileID: 0}
     - target: {fileID: 4848554385154512362, guid: 2449b4f53a0b1474c98645269fff2835, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -6159,6 +6243,10 @@ PrefabInstance:
     - target: {fileID: 1822778265930637382, guid: 35ec6f8415428ad4fa4611390aff2a2d, type: 3}
       propertyPath: m_Name
       value: MageChoice
+      objectReference: {fileID: 0}
+    - target: {fileID: 1822778265930637382, guid: 35ec6f8415428ad4fa4611390aff2a2d, type: 3}
+      propertyPath: m_TagString
+      value: mage
       objectReference: {fileID: 0}
     - target: {fileID: 2802303948004315437, guid: 35ec6f8415428ad4fa4611390aff2a2d, type: 3}
       propertyPath: m_RootOrder
@@ -6217,6 +6305,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ArcherChoice
       objectReference: {fileID: 0}
+    - target: {fileID: 2996398706614119274, guid: d6d7017fb7ed69f46a11d29ba379e225, type: 3}
+      propertyPath: m_TagString
+      value: archer
+      objectReference: {fileID: 0}
     - target: {fileID: 2996398706900242425, guid: d6d7017fb7ed69f46a11d29ba379e225, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -6273,6 +6365,10 @@ PrefabInstance:
     - target: {fileID: 958705129324533742, guid: a9afd49c669f3d14393408ad23470d5c, type: 3}
       propertyPath: m_Name
       value: BarbarianChoice
+      objectReference: {fileID: 0}
+    - target: {fileID: 958705129324533742, guid: a9afd49c669f3d14393408ad23470d5c, type: 3}
+      propertyPath: m_TagString
+      value: barbarian
       objectReference: {fileID: 0}
     - target: {fileID: 3457263282805587852, guid: a9afd49c669f3d14393408ad23470d5c, type: 3}
       propertyPath: m_RootOrder
