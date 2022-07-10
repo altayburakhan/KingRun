@@ -7,89 +7,29 @@ using UnityEngine;
 public class CharacterMove : MonoBehaviour
 {
     // ========================================= Definitions ========================================
-    private CharacterController controller;
-    private Vector3 characterDirection;
-    private Vector3 startTouchPosition;
-    private Vector3 currentPosition;
-    private Vector3 endTouchPosition;
-    private bool stopTouch = false;
-    private float swipeRange;
-    private float forwardSpeed = 10f;
-    private int desiredLane = 0; // 0 = left, 1 = right
-    private float laneDistance = 4; // The distance between two lanes.
+    [SerializeField] private float movementSpeed;
+    [SerializeField] private float rotationSpeed;
     // ==============================================================================================
     private void Start()
     {
-        controller = GetComponent<CharacterController>();
     }
 
     private void Update()
     {
-        characterDirection.z = forwardSpeed;
+        float horizontalMovement = Input.GetAxis("Horizontal");
+        float verticalMovement = Input.GetAxis("Vertical");
+        Vector3 movementDirectionVector = new Vector3(horizontalMovement, 0, verticalMovement);
+        movementDirectionVector.Normalize();
+        transform.Translate(movementDirectionVector * movementSpeed * Time.deltaTime, Space.World);
 
-        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+        if (movementDirectionVector != Vector3.zero)
         {
-            startTouchPosition = Input.GetTouch(0).position;
+            Quaternion toRotation = Quaternion.LookRotation(movementDirectionVector, Vector3.up);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
         }
-
-        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved)
-        {
-            currentPosition = Input.GetTouch(0).position;
-            Vector3 Distance = currentPosition - startTouchPosition;
-            if (!stopTouch)
-            {
-                if (Distance.x < -swipeRange)
-                {
-                    Debug.Log("left");
-                    desiredLane--;
-                    if (desiredLane == -1)
-                    {
-                        desiredLane = 0;
-                    }
-
-                    stopTouch = true;
-                }
-
-                else if (Distance.x > swipeRange)
-                {
-                    Debug.Log("Right");
-                    desiredLane++;
-                    if (desiredLane == 2)
-                    {
-                        desiredLane = 1;
-                    }
-
-                    stopTouch = true;
-                }
-
-            }
-        }
-
-        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Ended)
-        {
-            stopTouch = false;
-            endTouchPosition = Input.GetTouch(0).position;
-            Vector3 Distance = endTouchPosition - startTouchPosition;
-
-        }
-
-        Vector3 targetPosition = transform.position.z * transform.forward + transform.position.y * transform.up;
-        if (desiredLane == 0)
-        {
-            targetPosition += Vector3.left * laneDistance;
-        }
-        else if (desiredLane == 1)
-        {
-            targetPosition += Vector3.right * laneDistance;
-        }
-
-        transform.position = targetPosition;
-
+        
     }
 
-    private void FixedUpdate()
-    {
-        controller.Move(characterDirection * Time.fixedDeltaTime);
-    }
+    
 }
          

@@ -15,7 +15,27 @@ public class ChoiceInteraction : MonoBehaviour
         
     }
 
-    private void OnControllerColliderHit(ControllerColliderHit hit)
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("mage"))
+        {
+            Destroy(other.gameObject);
+        }
+        if (other.gameObject.CompareTag("barbarian"))
+        {
+            Destroy(other.gameObject);
+        }
+        if (other.gameObject.CompareTag("warrior"))
+        {
+            Destroy(other.gameObject);
+        }
+        if (other.gameObject.CompareTag("archer"))
+        {
+            Destroy(other.gameObject);
+        }
+    }
+
+    /*private void OnControllerColliderHit(ControllerColliderHit hit)
     {
         if (hit.gameObject.CompareTag("mage"))
         {
@@ -33,5 +53,5 @@ public class ChoiceInteraction : MonoBehaviour
         {
             Destroy(hit.gameObject);
         }
-    }
+    }*/
 }
