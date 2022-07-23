@@ -9,5 +9,6 @@ private bool gameOver;
     private void OnCollisionEnter(Collision collision)
     {
         gameOver = true;
+            //asdasdas
     }
 }

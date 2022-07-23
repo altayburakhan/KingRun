@@ -52,7 +52,7 @@ public class ChoiceInteraction : MonoBehaviour
             {
                 colliders.enabled = false;
             }
-            countWarrior++;
+            countArcher++;
         }
     }
     
