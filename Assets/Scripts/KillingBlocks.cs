@@ -9,6 +9,13 @@ private bool gameOver;
     private void OnCollisionEnter(Collision collision)
     {
         gameOver = true;
-            //asdasdas
+    }
+
+    private void Update()
+    {
+        if (gameOver)
+        {
+            Time.timeScale = 0;
+        }
     }
 }

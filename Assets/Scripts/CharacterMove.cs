@@ -8,20 +8,27 @@ public class CharacterMove : MonoBehaviour
     // ========================================= Definitions ========================================
     [SerializeField] private float movementSpeed;
     [SerializeField] private float rotationSpeed;
-    public float obje;
-    
-    private void Update()
+    private float movementLimit;
+    public Animator runningAnimation;
+    private static readonly int isRunning = Animator.StringToHash("isRunning");
+
+    private void FixedUpdate()
     {
-        obje = transform.position.x;
+        movementLimit = transform.position.x;
         float horizontalMovement = Input.GetAxis("Horizontal");
         float verticalMovement = Input.GetAxis("Vertical");
         verticalMovement = Mathf.Clamp01(verticalMovement); // If the y axis is forward/back then minus is backwards, this will clamp the value between 0-1 so you can only go forward, not backward.
-        
-    // ================================================== Movement =====================================================
-    
+
+        // ================================================== Movement =====================================================
+
         Vector3 movementDirectionVector = new Vector3(horizontalMovement, 0, verticalMovement);
         movementDirectionVector.Normalize();
-        transform.Translate(movementDirectionVector * movementSpeed * Time.deltaTime, Space.World);
+        transform.Translate(movementDirectionVector * (movementSpeed * Time.deltaTime), Space.World);
+        if (horizontalMovement != 0 || verticalMovement != 0)
+        {
+            runningAnimation.SetBool(isRunning , true);
+        }else
+            runningAnimation.SetBool(isRunning , false);
         
     // ================================================== Rotation =====================================================
     
@@ -32,11 +39,11 @@ public class CharacterMove : MonoBehaviour
         }
     // ============================================ Avoid falling corners ==============================================
     
-        if (obje >= 4.510f)
+        if (movementLimit >= 4.510f)
         {
             transform.position = new Vector3(4.509f, 0, transform.position.z);
         }
-        if (obje <= -4.510f)
+        if (movementLimit <= -4.510f)
         {
             transform.position = new Vector3(-4.509f, 0, transform.position.z);
         }
