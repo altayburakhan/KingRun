@@ -9,6 +9,10 @@ TagManager:
   - Melee
   - Ranged
   - Cell
+  - Archer
+  - Barbarian
+  - Warrior
+  - Mage
   layers:
   - Default
   - TransparentFX

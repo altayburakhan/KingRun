@@ -19,20 +19,20 @@ public class ClassCounts : MonoBehaviour
 
     private void Update()
     {
-        if (gameObject.CompareTag("archer"))
+        if (gameObject.CompareTag("Archer"))
         {
             classText.text = choices.countArcher.ToString();
         }
 
-        if (gameObject.CompareTag("barbarian"))
+        if (gameObject.CompareTag("Barbarian"))
         {
             classText.text = choices.countBarbarian.ToString();
         }
-        if (gameObject.CompareTag("mage"))
+        if (gameObject.CompareTag("Mage"))
         {
             classText.text = choices.countMage.ToString();
         }
-        if (gameObject.CompareTag("warrior"))
+        if (gameObject.CompareTag("Warrior"))
         {
             classText.text = choices.countWarrior.ToString();
         }

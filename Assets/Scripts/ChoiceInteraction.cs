@@ -14,7 +14,7 @@ public class ChoiceInteraction : MonoBehaviour
         
         var parentOfColliderObject = other.transform.parent.gameObject;
 
-        if (other.gameObject.CompareTag("mage"))
+        if (other.gameObject.CompareTag("Mage"))
         {
             Destroy(other.gameObject);
             boxCollider =  parentOfColliderObject.GetComponentsInChildren<BoxCollider>();
@@ -23,8 +23,9 @@ public class ChoiceInteraction : MonoBehaviour
                 colliders.enabled = false;
             }
             countMage++;
+            Debug.Log("mage");
         }
-        if (other.gameObject.CompareTag("barbarian"))
+        if (other.gameObject.CompareTag("Barbarian"))
         {
             Destroy(other.gameObject);
             boxCollider =  parentOfColliderObject.GetComponentsInChildren<BoxCollider>();
@@ -33,8 +34,9 @@ public class ChoiceInteraction : MonoBehaviour
                 colliders.enabled = false;
             }
             countBarbarian++;
+            Debug.Log("barbar");
         }
-        if (other.gameObject.CompareTag("warrior"))
+        if (other.gameObject.CompareTag("Warrior"))
         {
             Destroy(other.gameObject);
             boxCollider =  parentOfColliderObject.GetComponentsInChildren<BoxCollider>();
@@ -43,8 +45,9 @@ public class ChoiceInteraction : MonoBehaviour
                 colliders.enabled = false;
             }
             countWarrior++;
+            Debug.Log("warrior");
         }
-        if (other.gameObject.CompareTag("archer"))
+        if (other.gameObject.CompareTag("Archer"))
         {
             Destroy(other.gameObject);
             boxCollider =  parentOfColliderObject.GetComponentsInChildren<BoxCollider>();
@@ -53,6 +56,7 @@ public class ChoiceInteraction : MonoBehaviour
                 colliders.enabled = false;
             }
             countArcher++;
+            Debug.Log("archer");
         }
     }
     
