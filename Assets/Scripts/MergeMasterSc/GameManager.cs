@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 using System.Collections.Generic;
@@ -30,7 +31,9 @@ public class GameManager : MonoBehaviour
     public Transform prefabGridCell;
     [SerializeField] Transform _grid;
     public GridCell[,] grid = new GridCell[5, 3];
-    [SerializeField] Formation _formation;    
+    [SerializeField] Formation _formation;
+    public ChoiceInteraction _choiceInteraction;
+    
 
     private void Awake()
     {
@@ -228,39 +231,43 @@ public class GameManager : MonoBehaviour
 
     public void SpawnWarrior()
     {
-        if (goldAmount >= _warriorCost)
+        if (goldAmount >= _warriorCost && _choiceInteraction.countWarrior != 0)
         {
             goldAmount -= _warriorCost;
             _warriorCost += 3000;
             Spawn("Warrior");
+            _choiceInteraction.countWarrior--;
         }
     }
 
     public void SpawnArcher()
     {
-        if (goldAmount >= _archerCost)
+        if (goldAmount >= _archerCost && _choiceInteraction.countArcher != 0)
         {
             goldAmount -= _archerCost;
             _archerCost += 2000;
             Spawn("Archer");
+            _choiceInteraction.countArcher--;
         }
     }
     public void SpawnMage()
     {
-        if (goldAmount >= _mageCost)
+        if (goldAmount >= _mageCost && _choiceInteraction.countMage != 0)
         {
             goldAmount -= _mageCost;
             _mageCost += 2000;
             Spawn("Mage");
+            _choiceInteraction.countMage--;
         }
     }
     public void SpawnBarbarian()
     {
-        if (goldAmount >= _barbarianCost)
+        if (goldAmount >= _barbarianCost && _choiceInteraction.countBarbarian != 0)
         {
             goldAmount -= _barbarianCost;
             _barbarianCost += 2000;
             Spawn("Barbarian");
+            _choiceInteraction.countBarbarian--;
         }
     }
 

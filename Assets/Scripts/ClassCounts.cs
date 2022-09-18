@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class ClassCounts : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class ClassCounts : MonoBehaviour
     {
         choices = player.GetComponent<ChoiceInteraction>();
         classText = gameObject.GetComponent<TextMeshProUGUI>();
-        
+
     }
 
     private void Update()
@@ -27,14 +28,17 @@ public class ClassCounts : MonoBehaviour
         if (gameObject.CompareTag("Barbarian"))
         {
             classText.text = choices.countBarbarian.ToString();
+           
         }
         if (gameObject.CompareTag("Mage"))
         {
             classText.text = choices.countMage.ToString();
+            
         }
         if (gameObject.CompareTag("Warrior"))
         {
             classText.text = choices.countWarrior.ToString();
+            
         }
     }
 }
