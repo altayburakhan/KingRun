@@ -12,7 +12,7 @@ public class CharacterMove : MonoBehaviour
     public Animator runningAnimation;
     private static readonly int isRunning = Animator.StringToHash("isRunning");
 
-    private void FixedUpdate()
+    private void Update()
     {
         movementLimit = transform.position.x;
         float horizontalMovement = Input.GetAxis("Horizontal");
@@ -39,13 +39,13 @@ public class CharacterMove : MonoBehaviour
         }
     // ============================================ Avoid falling corners ==============================================
     
-        if (movementLimit >= 4.510f)
+        if (movementLimit >= 2.61000f)
         {
-            transform.position = new Vector3(4.509f, 0, transform.position.z);
+            transform.position = new Vector3(2.60999f, 1.24f, transform.position.z);
         }
-        if (movementLimit <= -4.510f)
+        if (movementLimit <= -2.11000f)
         {
-            transform.position = new Vector3(-4.509f, 0, transform.position.z);
+            transform.position = new Vector3(-2.10999f, 1.24f, transform.position.z);
         }
     }
 }
