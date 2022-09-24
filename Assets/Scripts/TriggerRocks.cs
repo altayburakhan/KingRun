@@ -20,7 +20,7 @@ public class TriggerRocks : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
         for (int i = 0; i < Children.Count; i++)
         {
