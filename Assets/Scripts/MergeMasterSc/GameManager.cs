@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
     public GridCell[,] grid = new GridCell[5, 3];
     [SerializeField] Formation _formation;
     public ChoiceInteraction _choiceInteraction;
+    public CameraController cameraController;
     
 
     private void Awake()
@@ -72,7 +73,7 @@ public class GameManager : MonoBehaviour
                 RaycastHit hit;
                 if (Physics.Raycast(ray, out hit))
                 {
-                    if (!(hit.collider.CompareTag("Warrior") || hit.collider.CompareTag("Archer")) || (hit.collider.CompareTag("Mage") || hit.collider.CompareTag("Barbarian")) )
+                    if (!(hit.collider.CompareTag("Warrior") || hit.collider.CompareTag("Archer") || (hit.collider.CompareTag("Mage") || hit.collider.CompareTag("Barbarian"))) )
                     {
                         return;
                     }
@@ -231,10 +232,10 @@ public class GameManager : MonoBehaviour
 
     public void SpawnWarrior()
     {
-        if (goldAmount >= _warriorCost && _choiceInteraction.countWarrior != 0)
+        if (goldAmount >= _warriorCost && _choiceInteraction.countWarrior != 0 && cameraController.isCameraOn)
         {
             goldAmount -= _warriorCost;
-            _warriorCost += 3000;
+            _warriorCost += 2000;
             Spawn("Warrior");
             _choiceInteraction.countWarrior--;
         }
@@ -242,7 +243,7 @@ public class GameManager : MonoBehaviour
 
     public void SpawnArcher()
     {
-        if (goldAmount >= _archerCost && _choiceInteraction.countArcher != 0)
+        if (goldAmount >= _archerCost && _choiceInteraction.countArcher != 0 && cameraController.isCameraOn)
         {
             goldAmount -= _archerCost;
             _archerCost += 2000;
@@ -252,7 +253,7 @@ public class GameManager : MonoBehaviour
     }
     public void SpawnMage()
     {
-        if (goldAmount >= _mageCost && _choiceInteraction.countMage != 0)
+        if (goldAmount >= _mageCost && _choiceInteraction.countMage != 0 && cameraController.isCameraOn)
         {
             goldAmount -= _mageCost;
             _mageCost += 2000;
@@ -262,7 +263,7 @@ public class GameManager : MonoBehaviour
     }
     public void SpawnBarbarian()
     {
-        if (goldAmount >= _barbarianCost && _choiceInteraction.countBarbarian != 0)
+        if (goldAmount >= _barbarianCost && _choiceInteraction.countBarbarian != 0 && cameraController.isCameraOn)
         {
             goldAmount -= _barbarianCost;
             _barbarianCost += 2000;
