@@ -12,7 +12,7 @@ public class CharacterMove : MonoBehaviour
     public Animator runningAnimation;
     private static readonly int isRunning = Animator.StringToHash("isRunning");
     public bool checkDied;
-
+    
     private void Start()
     {
         checkDied = false;
@@ -44,7 +44,11 @@ public class CharacterMove : MonoBehaviour
                 transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
             }
         }
-        if (horizontalMovement != 0 || verticalMovement != 0)
+        else
+        {
+            GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+        }
+        if ((horizontalMovement != 0 || verticalMovement != 0) && !checkDied)
         {
             runningAnimation.SetBool(isRunning , true);
         }else
