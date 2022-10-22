@@ -6777,6 +6777,7 @@ MonoBehaviour:
   rotationSpeed: 700
   runningAnimation: {fileID: 526079596}
   checkDied: 0
+  _joystick: {fileID: 1894273921}
 --- !u!136 &526079600
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -22002,6 +22003,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 467050608}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1894273921 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2929252283123773951, guid: aaa2c939c0359ac4dbce3f49e8b90252,
+    type: 3}
+  m_PrefabInstance: {fileID: 1688059219}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45977bbae16431c46a013576a1aea384, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1896895007 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6075155838382831309, guid: 273b8f4150121d249ac7e2fd11da7005,

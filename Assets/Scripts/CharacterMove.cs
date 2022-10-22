@@ -12,6 +12,7 @@ public class CharacterMove : MonoBehaviour
     public Animator runningAnimation;
     private static readonly int isRunning = Animator.StringToHash("isRunning");
     public bool checkDied;
+    public Joystick _joystick;
     
     private void Start()
     {
@@ -22,8 +23,8 @@ public class CharacterMove : MonoBehaviour
     {
         
         movementLimit = transform.position.x;
-        float horizontalMovement = Input.GetAxis("Horizontal");
-        float verticalMovement = Input.GetAxis("Vertical");
+        float horizontalMovement = _joystick.Horizontal;
+        float verticalMovement = _joystick.Vertical;
         verticalMovement = Mathf.Clamp01(verticalMovement); // If the y axis is forward/back then minus is backwards, this will clamp the value between 0-1 so you can only go forward, not backward.
         
         // ================================================== Movement =====================================================
