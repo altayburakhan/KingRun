@@ -28,7 +28,11 @@ public class Unit : MonoBehaviour
     private Unit _target;
     public Healthbar healthbar;
     protected GameManager _manager;
-
+    public Animator RunAnimator;
+    
+    private static readonly int isRunning = Animator.StringToHash("IsRunning");
+    private static readonly int isAttacking = Animator.StringToHash("MeleeAttack");
+    private static readonly int isDead = Animator.StringToHash("IsDead");
     protected virtual void Awake()
     {
         _manager = GameObject.Find("GameManager").GetComponent<GameManager>();
@@ -99,6 +103,8 @@ public class Unit : MonoBehaviour
                 {
                     // keep moving until the target is in range
                     this.gameObject.transform.position = Vector3.MoveTowards(this.gameObject.transform.position, _target.gameObject.transform.position, this.unitSpeed * Time.deltaTime);
+                    //ALSO...
+                    RunAnimator.SetBool(isRunning,true);
                 }
                 else
                 {
@@ -113,6 +119,7 @@ public class Unit : MonoBehaviour
             if (_nextAttack > 0)
             {
                 _nextAttack -= Time.deltaTime;
+                RunAnimator.SetBool(isAttacking,true);
             }
             else if (_nextAttack <= 0)
             {

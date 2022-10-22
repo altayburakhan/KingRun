@@ -34,8 +34,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] Formation _formation;
     public ChoiceInteraction _choiceInteraction;
     public CameraController cameraController;
+    public GameObject FinalUi;
     
-
+    /*Animator*/
+    
     private void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
@@ -432,6 +434,7 @@ public class GameManager : MonoBehaviour
         if (remainingEnemies.Count == 0)
         {
             Debug.Log("All enemies defeated");
+            FinalUi.SetActive(true);
             LoadFormation();
         }
         else if (remainingAllies.Count == 0)
