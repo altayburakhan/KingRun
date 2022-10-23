@@ -13,7 +13,7 @@ public class Unit : MonoBehaviour
     public int unitDefense;
     public float unitSpeed;
     public float unitRange;
-    private float _unitAttackDelay = 1.5f;
+    private float _unitAttackDelay = 1.2f;
     private float _nextAttack;
     public int level = 0;
     public bool isEnemy = false;
@@ -32,7 +32,7 @@ public class Unit : MonoBehaviour
     
     private static readonly int isRunning = Animator.StringToHash("IsRunning");
     private static readonly int isAttacking = Animator.StringToHash("MeleeAttack");
-    private static readonly int isDead = Animator.StringToHash("IsDead");
+    
     protected virtual void Awake()
     {
         _manager = GameObject.Find("GameManager").GetComponent<GameManager>();
@@ -104,6 +104,7 @@ public class Unit : MonoBehaviour
                     // keep moving until the target is in range
                     this.gameObject.transform.position = Vector3.MoveTowards(this.gameObject.transform.position, _target.gameObject.transform.position, this.unitSpeed * Time.deltaTime);
                     //ALSO...
+                    RunAnimator.SetBool(isAttacking,false);
                     RunAnimator.SetBool(isRunning,true);
                 }
                 else
@@ -119,6 +120,7 @@ public class Unit : MonoBehaviour
             if (_nextAttack > 0)
             {
                 _nextAttack -= Time.deltaTime;
+                RunAnimator.SetBool(isRunning,false);
                 RunAnimator.SetBool(isAttacking,true);
             }
             else if (_nextAttack <= 0)
@@ -193,6 +195,9 @@ public class Unit : MonoBehaviour
         else
         {
             this.currentStatus = Status.Idle;
+            RunAnimator.SetBool(isAttacking,false);
+            RunAnimator.SetBool(isAttacking,false);
+            
         }
     }
 

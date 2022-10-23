@@ -65,6 +65,6 @@ public class SoundControl : MonoBehaviour
     private void Save()
     {
         PlayerPrefs.SetInt("muted", muted ? 1 : 0);
-            ;
+            
     }
 }
