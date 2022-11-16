@@ -440,6 +440,7 @@ public class GameManager : MonoBehaviour
         else if (remainingAllies.Count == 0)
         {
             Debug.Log("All allies defeated");
+       
             LoadFormation();
         }        
     }
