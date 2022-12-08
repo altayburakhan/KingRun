@@ -50,7 +50,7 @@ public class Unit : MonoBehaviour
         this.unitRange = 1;
         this.unitSpeed = 1;
         this.unitName = "Level " + this.level + " Unit";
-        //this.name = this.unitName;
+        this.name = this.unitName;
         this.healthbar.SetMaxHealth(this.unitMaxHealth);
         this.healthbar.SetHealth(this.unitHealth);
     }

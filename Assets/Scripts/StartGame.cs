@@ -9,4 +9,14 @@ public class StartGame : MonoBehaviour
     {
        SceneManager.LoadScene("GameplayScene");
     }
+
+    public void GoMainMenu()
+    {
+        SceneManager.LoadScene("Menu"); 
+    }
+
+    public void SecondLevel()
+    {
+        SceneManager.LoadScene("SecondLevel");
+    }
 }
