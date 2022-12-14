@@ -116,7 +116,7 @@ public class Unit : MonoBehaviour
         }
         if (this.currentStatus == Status.Attacking)
         {
-            // processing attack delay here
+            // attack delay 
             if (_nextAttack > 0)
             {
                 _nextAttack -= Time.deltaTime;
@@ -145,14 +145,12 @@ public class Unit : MonoBehaviour
         // if unit defense is higher than damage, unit will not take damage
         this.unitHealth -= damage - unitDefense > 0 ? damage - unitDefense : 0;
         this.healthbar.SetHealth(this.unitHealth);
-        // only add gold on enemy hit, not ally hit
         if (this.isEnemy)
         {
             _manager.AddGold(this.unitMaxHealth);
             var _floatingText = Instantiate(floatingText, this.transform);
             _floatingText.GetComponent<TextMeshPro>().SetText("+" + this.unitMaxHealth);
             _floatingText.GetComponent<TextMeshPro>().transform.Rotate(Vector3.up*-180);
-            // TODO: calculating max height based on bounds, then set text to desired height before applying animation
             _floatingText.transform.position = new Vector3(_floatingText.transform.position.x, 1f, _floatingText.transform.position.z);
             _floatingText.transform.DOMoveY(1.5f, .5f);
             _floatingText.GetComponent<TextMeshPro>().DOFade(0, .5f);

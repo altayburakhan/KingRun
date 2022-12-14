@@ -12,7 +12,7 @@ public class MeleeUnit : Unit
         {
             this.levelColors[i].a = .65f;
         }
-        this.unitRange = 1;
+        this.unitRange = 2;
         
     }
     protected override void Attack(Unit target)

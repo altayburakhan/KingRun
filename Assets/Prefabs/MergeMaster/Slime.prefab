@@ -133,8 +133,9 @@ MonoBehaviour:
   pfProjectile: {fileID: 0}
   floatingText: {fileID: 405581591122233468, guid: 4fcee7865f1e9cd4bb2ab542009733dc,
     type: 3}
-  healthbar: {fileID: 0}
-  RunAnimator: {fileID: 0}
+  healthbar: {fileID: 9127481415971023813}
+  RunAnimator: {fileID: 95432009455932990, guid: c1a6213308e9d2a44bce4d03a2b8b6b4,
+    type: 3}
 --- !u!1 &1159745215084782
 GameObject:
   m_ObjectHideFlags: 0
@@ -645,6 +646,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03a12f0ed87862d48a3f62257e6932a0, type: 3}
+--- !u!114 &9127481415971023813 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 495097503432734368, guid: 03a12f0ed87862d48a3f62257e6932a0,
+    type: 3}
+  m_PrefabInstance: {fileID: 8680023572781260133}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c884b4c06b42ce04398446a03291e28b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &9127481417959019492 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 495097502182788737, guid: 03a12f0ed87862d48a3f62257e6932a0,

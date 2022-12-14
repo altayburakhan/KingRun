@@ -3664,6 +3664,20 @@ MonoBehaviour:
   gameOver: {fileID: 526079596}
   player: {fileID: 526079594}
   canvas: {fileID: 490006076}
+--- !u!64 &295594602
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 295594598}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 2e716c43576f71b4aa87e6cb4ebeaeab, type: 3}
 --- !u!1001 &296761279
 PrefabInstance:
   m_ObjectHideFlags: 0
