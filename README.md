@@ -1,6 +1,6 @@
 # KingRun
 
-![image](https://img.shields.io/badge/Google_Play-414141?style=for-the-badge&logo=google-play&logoColor=white) Google Play : 
+![image](https://img.shields.io/badge/Google_Play-414141?style=for-the-badge&logo=google-play&logoColor=white)  Google Play : https://play.google.com/store/apps/details?id=com.DefaultCompany.MergeMasters&pli=1
 
 ***A game where I combined Runner and merge system.***
 
