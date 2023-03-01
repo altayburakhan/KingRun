@@ -29,4 +29,4 @@
 
 ![Ekran görüntüsü 2022-12-15 133407](https://user-images.githubusercontent.com/54476824/207881714-04bcde10-c180-4a26-95a0-2c8d72c7eabe.png)
 
-![]![Google_Play-Icon-Logo wine](https://user-images.githubusercontent.com/54476824/222278388-330fc654-a820-4a85-a180-75b26d9a01ac.png)
+
