@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1085285911648",
+    "project_id": "kingrun-23a06",
+    "storage_bucket": "kingrun-23a06.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1085285911648:android:d123405ad71171c8a78705",
+        "android_client_info": {
+          "package_name": "com.DefaultCompany.MergeMasters"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALcZVASYu6uZzbKSCK0zAuVJIEnsusXlQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
