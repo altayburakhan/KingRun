@@ -1,7 +1,5 @@
 # 👑 King Run
 
-[![Google Play](https://img.shields.io/badge/Google_Play-414141?style=for-the-badge&logo=google-play&logoColor=white)](https://play.google.com/store/apps/details?id=com.DefaultCompany.MergeMasters&pli=1)
-
 A hybrid hypercasual mobile game that combines **endless runner** and **merge strategy** mechanics into a single gameplay loop.
 
 Players collect different unit classes while navigating an obstacle-filled level. At the end of each run, collected units are deployed onto a battlefield where they can be strategically merged into stronger units before combat begins.
