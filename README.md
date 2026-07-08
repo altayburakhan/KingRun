@@ -119,6 +119,6 @@ This project helped me gain hands-on experience with:
 
 # Google Play
 
-The game is available on Google Play.
+The game was available on Google Play.
 
-https://play.google.com/store/apps/details?id=com.DefaultCompany.MergeMasters&pli=1
+
