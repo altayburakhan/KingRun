@@ -46,7 +46,6 @@ The outcome depends on both the player's performance during the runner phase and
 |----------|--------------|
 | Engine | Unity |
 | Language | C# |
-| Architecture | Entitas ECS |
 | Animation | DOTween |
 | Camera | Cinemachine |
 | Version Control | Git |
