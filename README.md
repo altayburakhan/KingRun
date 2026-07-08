@@ -106,7 +106,6 @@ Victory
 This project helped me gain hands-on experience with:
 
 - Designing hybrid gameplay loops
-- Implementing Entity Component System (Entitas ECS)
 - Building modular gameplay systems
 - Managing camera transitions with Cinemachine
 - Creating animation sequences using DOTween
